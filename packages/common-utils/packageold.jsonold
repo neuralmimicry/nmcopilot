@@ -1,0 +1,54 @@
+{
+  "name": "common-utils",
+  "version": "0.1.0",
+  "description": "Common utilities between monorepo packages.",
+  "repository": "git@github.com:neuralmimicry/nmcopilot.git",
+  "author": "Paul B. Isaac's, neuralmimicry",
+  "license": "MIT",
+  "private": true,
+  "main": "./dist/pages/index.js",
+  "types": "dist/pages/index.d.ts",
+  "type": "module",
+  "files": [
+    "src/styles"
+  ],
+  "scripts": {
+    "dev": "npx tsc -p . --outDir dist && cp src/components/Flow/*.css dist/components/Flow/ && mkdir -p dist/styles && cp src/styles/*.css dist/styles/ && rollup -c",
+    "build": "npx tsc -p . --outDir dist && cp src/components/Flow/*.css dist/components/Flow/ && mkdir -p dist/styles && cp src/styles/*.css dist/styles/ && rollup -c",
+    "start": "node ./dist/index.js",
+    "lint": "eslint . --ext .ts,.tsx"
+    },
+  "dependencies": {
+    "@radix-ui/react-hover-card": "^1.0.6",
+    "@radix-ui/react-label": "^2.0.2",
+    "@radix-ui/react-popover": "^1.0.6",
+    "@radix-ui/react-select": "^1.2.2",
+    "@reactflow/core": "^11.8.3",
+    "@reactflow/node-resizer": "^2.1.5",
+    "@vercel/analytics": "^1.0.2",
+    "autoprefixer": "^10.4.15",
+    "buffer": "^6.0.3",
+    "class-variance-authority": "^0.7.0",
+    "clsx": "^2.0.0",
+    "core-js": "^3.32.2",
+    "debug": "^4.3.4",
+    "dotenv": "16.3.1",
+    "endent": "^2.1.0",
+    "eslint": "8.49.0",
+    "eventsource-parser": "^1.0.0",
+    "jotai": "^2.4.2",
+    "js-base64": "^3.7.5",
+    "lucide-react": "^0.276.0",
+    "pako": "^2.1.0",
+    "prettier-plugin-tailwindcss": "^0.5.4",
+    "react": "18.2.0",
+    "react-dom": "18.2.0",
+    "reactflow": "^11.8.3",
+    "tailwind-merge": "^1.14.0",
+    "web-streams-polyfill": "^3.2.1"
+  },
+  "devDependencies": {
+    "@changesets/changelog-github": "^0.4.8",
+    "typescript": "^5.2.2"
+  }
+}

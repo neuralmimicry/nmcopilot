@@ -1,0 +1,28 @@
+{
+  "extends": "../../tsconfig.base.json",
+  "compilerOptions": {
+    "jsx": "preserve", // Enables JSX support. "react-jsx" is the new JSX transform in React 17+
+    "outDir": "dist", // Output directory for the compiled files
+    "rootDir": "src", // Root directory of source files
+    "baseUrl": "src", // Base URL for resolving non-relative module names
+    "module": "ESNext", // Use ESNext as the module system
+    "moduleResolution": "Node", // Use Node-style module resolution
+    "target": "ES6", // Transpile to ES6
+    "composite": false, // Don't enable project references
+    "allowJs": true, // Allow JavaScript files to be compiled
+    "skipLibCheck": true, // Skip type checking of declaration files
+    "esModuleInterop": true, // Enables CommonJS/AMD/UMD-style imports to be ES6-compatible
+    "allowSyntheticDefaultImports": true, // Allow default imports from modules with no default export
+    "strict": true, // Enable strict type-checking options
+    "forceConsistentCasingInFileNames": true, // Disallow inconsistently-cased references to the same file
+    "noFallthroughCasesInSwitch": true // Report fallthrough cases in switch statements
+  },
+  "include": [
+    "next-env.d.ts",
+    "src/**/*.ts",
+    "src/**/*.tsx"
+  ],
+  "exclude": [
+    "node_modules"
+  ]
+}

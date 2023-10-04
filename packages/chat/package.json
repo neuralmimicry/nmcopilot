@@ -1,0 +1,49 @@
+{
+  "name": "chat-websocket",
+  "version": "0.1.0",
+  "description": "Interface to remote Gen.AI solutions",
+  "repository": "git@github.com:neuralmimicry/nmcopilot.git",
+  "author": "Paul B. Isaac's, neuralmimicry",
+  "license": "MIT",
+  "private": true,
+  "main": "./dist/pages/api/chat.js",
+  "types": "dist/pages/api/chat.d.ts",
+  "type": "module",
+  "files": [
+    "src/styles"
+  ],
+  "scripts": {
+    "dev": "PORT=3002 NODE_ENV=development next dev -p 3002 &",
+    "build": "next build",
+    "start": "PORT=3002 NODE_ENV=production node dist/pages/api/chat.js &",
+    "lint": "eslint 'src/**/*.{ts,tsx,js,jsx}'"
+    },
+  "dependencies": {
+    "autoprefixer": "^10.4.15",
+    "buffer": "^6.0.3",
+    "class-variance-authority": "^0.7.0",
+    "clsx": "^2.0.0",
+    "common-utils": "workspace:*",
+    "core-js": "^3.32.2",
+    "debug": "^4.3.4",
+    "dotenv": "16.3.1",
+    "endent": "^2.1.0",
+    "eslint": "8.49.0",
+    "eventsource-parser": "^1.0.0",
+    "express": "^4.18.2",
+    "jotai": "^2.4.2",
+    "js-base64": "^3.7.5",
+    "openai": "^4.6.0",
+    "pako": "^2.1.0",
+    "prettier-plugin-tailwindcss": "^0.5.4",
+    "tailwind-merge": "^1.14.0",
+    "web-streams-polyfill": "^3.2.1",
+    "ws": "8.14.1"
+  },
+  "devDependencies": {
+    "@changesets/changelog-github": "^0.4.8",
+    "@types/ws": "^8.5.5",
+    "typescript": "^5.2.2",
+    "next-transpile-modules": "^10.0.1"
+  }
+}
